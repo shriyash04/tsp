@@ -73,5 +73,101 @@ var obj:Dictionary={
 };
 console.log(obj);
 
+//chat gpt code 
+
+//class
+
+class Animal {
+      name: string;
+    
+      constructor(name: string) {
+        this.name = name;
+      }
+    
+      move(distance: number = 0) {
+        console.log(`${this.name} moved ${distance} meters.`);
+      }
+    }
+    
+    let dog = new Animal("Dog");
+    dog.move(10); // Dog moved 10 meters.
+    
+//     Generics
+//     Generics provide a way to create reusable components
+
+function identity<T>(arg: T): T {
+      return arg;
+    }
+    let output1 = identity<string>("myString"); // output1 is of type 'string'
+    let output2 = identity<number>(100); // output2 is of type 'number'
+    
+
+//     Enums
+//     Enums allow a developer to define a set of named constants.
+
+enum Direction {
+      Up,
+      Down,
+      Left,
+      Right,
+    }
+    
+    let dir: Direction = Direction.Up;
+    console.log(dir); // 0
+
+//Type Assertions
+//Type assertions allow you to override TypeScript's type inference when you know 
+//more about a value than TypeScript does.
+
+let someValue: any = "this is a string";
+let strLength: number = (someValue as string).length;
+console.log(strLength); // 16
 
 
+// Union and Intersection Types
+//Union types allow a value to be one of several types. 
+//Intersection types combine multiple types into one.
+
+function printId(id: number | string) {
+      console.log(`Your ID is: ${id}`);
+    }
+    
+    printId(101); // Your ID is: 101
+    printId("202"); // Your ID is: 202
+    
+    interface Colorful {
+      color: string;
+    }
+    
+    interface Circle {
+      radius: number;
+    }
+    
+    type ColorfulCircle = Colorful & Circle;
+    
+    const ball: ColorfulCircle = {
+      color: "blue",
+      radius: 5,
+    };
+    
+    console.log(ball); // { color: 'blue', radius: 5 }
+
+    
+//     Type Guards
+//Type guards allow you to narrow down the type within a conditional block.
+function isNumber(value: any): value is number {
+      return typeof value === "number";
+    }
+    
+    function logValue(value: number | string) {
+      if (isNumber(value)) {
+        console.log(`Number: ${value}`);
+      } else {
+        console.log(`String: ${value}`);
+      }
+    }
+    
+    logValue(10); // Number: 10
+    logValue("hello"); // String: hello
+
+    

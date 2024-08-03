@@ -1,0 +1,30 @@
+1. Basic Types
+Basic Types in TypeScript include:
+
+boolean: Represents true or false.
+number: Represents all numeric values.
+string: Represents text data.
+array: Represents a collection of values.
+These types help ensure that variables have the expected kind of data.
+
+2. Interfaces
+Interfaces define the structure of an object, ensuring it has specific properties and methods. They act as a blueprint for objects, helping with type-checking and code organization.
+
+3. Classes
+Classes in TypeScript are blueprints for creating objects with specific properties and methods. They support features like inheritance, allowing one class to extend another, and encapsulation, bundling data and methods that operate on the data within one unit.
+
+4. Generics
+Generics allow you to create functions, classes, and interfaces that work with a variety of types, rather than a single one. They help write reusable and flexible code that can handle different data types without sacrificing type safety.
+
+5. Enums
+Enums (short for enumerations) allow you to define a set of named constants. They help make your code more readable and intent clearer by using descriptive names rather than arbitrary numbers or strings.
+
+6. Type Assertions
+Type Assertions allow you to override TypeScript's inferred type of a value. It’s like telling the compiler: "Trust me, I know what I'm doing." This is useful when you know more about the type of a value than TypeScript does.
+
+7. Union and Intersection Types
+Union Types allow a variable to be one of several types. For example, a value could be either a number or a string.
+Intersection Types combine multiple types into one. An object of an intersection type must satisfy all the combined types.
+8. Type Guards
+Type Guards are used to determine the type of a variable within a conditional block. They help ensure that you’re working with a specific type, improving type safety and reducing runtime errors.
+
